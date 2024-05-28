@@ -84,7 +84,7 @@ font-size: 34px;
 
 <div class="acolumn">
  <h2>Useful Links</h2>
- <a href="allproducts.php" >Products</a>
+ <a href="allproducts.php?cat=0" >Products</a>
  <a href="login.php" >Log in</a>
  <a href="register.php" >Register</a>
  </div>

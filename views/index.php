@@ -70,7 +70,7 @@ a:hover{
     
    <h1 class="title">Welcome To Greenfields</h1>
     <p class="desc">your premier destination for permium quality trees</p>
-  <a href="allproducts.php" >Shop Now</a>
+  <a href="allproducts.php?cat=0" >Shop Now</a>
    </div>
 </div>
 

@@ -113,13 +113,21 @@ table{
 }
 }
 
-.counterr{
-    width: 90px;
-        height: 30px;
-        background: white;
-        border-radius: 30px;
+.counter{
+    color: #57704f;
+    background:#F9ECD0;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 16px;
+    font-size:20px;
+    text-align: center;
+    margin-left: 5px;
 }
-
+.counter:focus{
+        outline:none;
+    border: 2px solid #002204;
+    }
 }
 
 
@@ -155,7 +163,8 @@ table{
 
     <td>30$</td>
     <td>
-    <div class="counterr"></div>
+<input type="number"  value="1" max="30" min="1" class="counter">
+    
     </td>
 
     <td>

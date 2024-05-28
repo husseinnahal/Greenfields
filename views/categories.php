@@ -1,3 +1,10 @@
+<?php 
+include ('../include/db.php');
+
+$cat='SELECT * FROM categories';
+$result=mysqli_query($conn,$cat);
+$getcat=mysqli_fetch_all($result,MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,61 +100,29 @@ margin-left:10px
 
 <body>
   <h1 class="titlee">Our Categories</h1>
+
+
   <!-- Swiper -->
   <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-    <div class="swiper-slide" ></div>
-      <div class="swiper-slide" style="    background-image: url(../img/lemon.jpg);
-             background-repeat: no-repeat;
-                 background-size: cover;">
-        <p class="titles">Cirtus Trees</p>
-        <a href="" >
-          <p>explore </p>              
-          <p> -> </p>
-        </a>
-      </div>
+    <div  class="swiper-wrapper">
+      <div class="swiper-slide" ></div>
 
-      <div class="swiper-slide" style="    background-image: url(../img/flow.jpg);
-background-repeat: no-repeat;
-background-size: cover;">
-        <p class="titles">Flowers</p>
-        <a href="" >
-          <p>explore </p>              
-          <p> -> </p>
-        </a>
-      </div> 
+      <?php foreach($getcat as $gett):?>
 
-      <div class="swiper-slide" style="    background-image: url(../img/orn.jpg);
-background-repeat: no-repeat;
-background-size: cover;">
-        <p class="titles">Onamental Plant</p>
-        <a href="" >
+      <div class="swiper-slide" style="    background-image: url('<?php echo $gett['image']?>'); background-repeat: no-repeat;  background-size: cover;">
+        <p class="titles"><?php echo $gett['name']?></p>
+        <a href="allproducts.php?cat=<?php echo $gett['id'] ?>" >
           <p>explore </p>              
           <p> -> </p>
         </a>
       </div>
-      <div class="swiper-slide" style="    background-image: url(../img/in.jpg);
-background-repeat: no-repeat;
-background-size: cover;">
-        <p class="titles">Indoor Plant</p>
-        <a href="" >
-          <p>explore </p>              
-          <p> -> </p>
-        </a>
-      </div>
-      <div class="swiper-slide" style="    background-image: url(../img/pl.jpg);
-background-repeat: no-repeat;
-background-size: cover;">
-        <p class="titles">Cirtus Trees</p>
-        <a href="" >
-          <p>explore </p>              
-          <p> -> </p>
-        </a>
-      </div>
-  
+      
+      
+      <?php endforeach?> 
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
   </div>
 <p class="para"> </p>
   <!-- Swiper JS -->

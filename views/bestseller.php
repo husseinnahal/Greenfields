@@ -118,7 +118,7 @@ font-size:20px;
 
       <div class="ourbest">
 
-<h1 class="titleseller">Our Best Seller</h1>
+<h1 class="titleseller">Our Best Selleris</h1>
 <a href="" class="viewall">View All</a>
 
   </div>
